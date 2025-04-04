@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Portfolio</title>
+<style>
+/* Body Styling */
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0C0F14; /* Deep Midnight Black */
+    color: #F0E68C; /* Khaki text */
+}
+
+/* Header Styling */
+header {
+    background-color: #FF4500; /* Vivid Orange-Red */
+    color: #0C0F14; /* Dark text for contrast */
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
+}
+.header-content h1 {
+    font-size: 3rem; /* Larger heading */
+    font-weight: bold;
+}
+
+/* Profile Picture Styling */
+.profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    border: 4px solid #FF6347; /* Tomato border for contrast */
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #FF4500; /* Vivid Orange-Red */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 25px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #F0E68C; /* Khaki text */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #FFD700; /* Gold hover effect */
+}
+
+/* Section Styling */
+.section-content {
+    background-color: #1A1F29; /* Charcoal Gray */
+    color: #F0E68C; /* Khaki text */
+    padding: 2.5rem;
+    margin: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 99, 71, 0.5); /* Tomato glow effect */
+    transition: transform 0.3s;
+}
+.section-content:hover {
+    transform: scale(1.02);
+}
+
+/* Button Styling */
+.download-button {
+    background-color: #FF6347; /* Tomato */
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.download-button:hover {
+    background-color: #FFD700; /* Gold hover effect */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #FF4500; /* Vivid Orange-Red */
+    color: #0C0F14; /* Dark contrast text */
+}
+ul {
+    list-style-type: square;
+    padding-left: 25px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="header-content">
+<img src="https://drive.google.com/file/d/1clCn-YDi744p2s9rqGDPT9w9XPYJRyHy/view?usp=drivesdk.jpg" alt="Your Profile Picture" class="profile-picture">
+<h1>SYED HAFNAS </h1>
+<p>STUDENT</p>
+</div>
+</header>
+
+<nav>
+<ul>
+<li><a href="#objective">OBJECTIVE</a></li>
+<li><a href="#education">EDUCATION</a></li>
+<li><a href="#skills">SKILLS</a></li>
+<li><a href="#projects">PROJECTS</a></li>
+<li><a href="#resume">RESUME</a></li>
+</ul>
+</nav>
+
+<section id="objective">
+<div class="section-content">
+<h2>OBJECTIVE</h2>
+<p>Enthusiastic and detail-oriented Computer Science student with a strong foundation in programming and problem-solving. Seeking opportunities to apply technical skills and gain hands-on experience in software development and related fields.</p>
+</div>
+</section>
+
+<section id="education">
+<div class="section-content">
+<h2>EDUCATION</h2>
+<p1>BSc. COMPUTER SCIENCE</p1>
+<br>Bishop appasamy college of arts and science</br>
+<br>Coimbatore, Tamil Nadu. </br>
+</div>
+</section>
+
+<section id="skills">
+<div class="section-content">
+<h2>SKILLS</h2>
+<ul>
+<li>Java</li>
+<li>Python</li>
+<li>Web Design</li>
+<li>Excel Sheet</li>
+</ul>
+</div>
+</section>
+
+<section id="projects">
+<div class="section-content">
+<h2>Projects</h2>
+<ul>
+<li><a href="#">Participated on SMART INDIA HACKATHON (AUGUST 2023 & 2024)</a></li>
+</ul>
+</div>
+</section>
+
+<section id="resume">
+<div class="section-content">
+<center>
+<h2>Resume</h2>
+<a href="https://drive.google.com/file/d/1cjyE148arwmo-Z84LX6q5a6XdVtY4Ilz/view?usp=drivesdk.pdf" target="_blank" class="download-button">Download CV</a>
+</center>
+</div>
+</section>
+
+<footer>
+<p>&copy; 2025 SYED HAFNAS A</p>
+</footer>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
